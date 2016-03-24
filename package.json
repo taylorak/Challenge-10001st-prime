@@ -1,0 +1,24 @@
+{
+  "name": "Challenge-10001st-prime",
+  "version": "1.0.0",
+  "description": "Challenge 7 ===========",
+  "main": "challenge_7.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylorak/Challenge-10001st-prime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taylorak/Challenge-10001st-prime/issues"
+  },
+  "homepage": "https://github.com/taylorak/Challenge-10001st-prime#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
