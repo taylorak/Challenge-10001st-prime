@@ -15,10 +15,6 @@ describe('PrimeFinder', function() {
   describe('PrimeFinder Methods', function() {
     var primeFinder = null;
 
-    beforeEach(function() {
-      primeFinder = new PrimeFinder(6);
-    })
-
     describe('getPrimeNumber', function() {
 
       it('should not be a member of the class PrimeFinder', function() {
@@ -26,15 +22,23 @@ describe('PrimeFinder', function() {
       })
 
       it('should be a member of the PrimeFinder instance', function() {
-        expect(primeFinder.getPrimeNumber).to.be.a('function');
+        expect(new PrimeFinder(6).getPrimeNumber).to.be.a('function');
       })
 
       it('should find the nth prime number', function() {
-        expect(primeFinder.getPrimeNumber()).to.equal(13);
-        //expect(primeFinder.getPrimeNumber()).to.equal();
+        expect(new PrimeFinder(6).getPrimeNumber()).to.equal(13);
+        expect(new PrimeFinder(10001).getPrimeNumber()).to.equal(104743);
       })
 
     }) // ends getPrimeNumber
+
+    describe('isPrime', function() {
+      it('should return true if number is prime', function() {
+        expect(new PrimeFinder().isPrime(13)).to.be.ok;
+        expect(new PrimeFinder().isPrime(104743)).to.be.ok;
+        expect(new PrimeFinder().isPrime(12)).to.not.be.ok;
+      })
+    }) // ends isPrime
 
   })
 }) // ends Challenge 7 suite
